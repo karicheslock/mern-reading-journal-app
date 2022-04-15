@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import { FaUser } from 'react-icons/fa';
 import { register, reset } from '../features/auth/authSlice';
 import Spinner from '../components/Spinner';
 import { Link } from 'react-router-dom';
@@ -81,7 +80,7 @@ function Register() {
                             onChange={onChange} 
                         />
                     </div>
-                    <label className='text-center text-slate-400 border-t-2 border-dashed border-sky-200 font-mono' for='firstName'>First Name</label>
+                    <label className='text-center text-slate-400 border-t-2 border-dashed border-sky-200 font-mono' htmlFor='firstName'>First Name</label>
                     <div>
                         <input 
                             type="text" 
@@ -93,7 +92,7 @@ function Register() {
                             onChange={onChange} 
                         />
                     </div>
-                    <label className='text-center text-slate-400 border-t-2 border-dashed border-sky-200 font-mono' for='lastName'>Last Name</label>
+                    <label className='text-center text-slate-400 border-t-2 border-dashed border-sky-200 font-mono' htmlFor='lastName'>Last Name</label>
                     <div>
                         <input 
                             type="email" 
@@ -105,7 +104,7 @@ function Register() {
                             onChange={onChange} 
                         />
                     </div>
-                    <label className='text-center text-slate-400 border-t-2 border-dashed border-sky-200 font-mono' for='email'>Email</label>
+                    <label className='text-center text-slate-400 border-t-2 border-dashed border-sky-200 font-mono' htmlFor='email'>Email</label>
                     <div>
                         <input 
                             type="text" 
@@ -117,7 +116,7 @@ function Register() {
                             onChange={onChange} 
                         />
                     </div>
-                    <label className='text-center text-slate-400 border-t-2 border-dashed border-sky-200 font-mono' for='username'>Username</label>
+                    <label className='text-center text-slate-400 border-t-2 border-dashed border-sky-200 font-mono' htmlFor='username'>Username</label>
                     <div>
                         <input 
                             type="password" 
@@ -129,7 +128,7 @@ function Register() {
                             onChange={onChange} 
                         />
                     </div>
-                    <label className='text-center text-slate-400 border-t-2 border-dashed border-sky-200 font-mono' for='password'>Password</label>
+                    <label className='text-center text-slate-400 border-t-2 border-dashed border-sky-200 font-mono' htmlFor='password'>Password</label>
                     <div>
                         <input 
                             type="password" 
@@ -141,7 +140,7 @@ function Register() {
                             onChange={onChange} 
                         />
                     </div>
-                    <label className='text-center text-slate-400 border-t-2 border-dashed border-sky-200 font-mono' for='password2'>Confirm Password</label>
+                    <label className='text-center text-slate-400 border-t-2 border-dashed border-sky-200 font-mono' htmlFor='password2'>Confirm Password</label>
                     <button className='font-mono w-1/2 mx-auto py-2 border-solid border-slate-300 border-2 rounded mt-3 text-teal-700 font-bold bg-slate-50 hover:w-2/3 hover:py-3 hover:bg-slate-100' type='submit'>
                         Submit
                     </button>

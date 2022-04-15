@@ -5,6 +5,7 @@ import EditBookForm from './components/EditBookForm';
 import Dashboard from './pages/Dashboard';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import BookForm from './components/EditBookForm';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
             <Route path='/login' element={<Login />} />
             <Route path='/register' element={<Register />} />
             <Route path='/edit-entry' element={<EditBookForm />} />
+            <Route path='/add-entry' element={<BookForm />} />
           </Routes>
         </div>
       </Router>

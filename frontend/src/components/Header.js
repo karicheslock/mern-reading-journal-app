@@ -19,10 +19,12 @@ function Header() {
         <div className='container flex bg-amber-50 h-24 items-center justify-between'>               
             <Link to='/' className='px-10 font-mono text-3xl text-teal-700 font-bold'>Reading Journal Builder</Link>
                 {user ? (
-                    <div className='flex'>
+                    <div className='flex px-10'>
                         <button onClick={onLogout}>
-                            <FaSignOutAlt className='text-teal-500' /> 
-                            <p className='px-2 text-teal-600'>Logout</p>
+                            <div className='flex px-5 items-center'>
+                                <FaSignOutAlt className='text-teal-500' /> 
+                                <p className='px-2 text-teal-600'>Logout</p>
+                            </div>
                         </button>
                     </div>
                 ) : (

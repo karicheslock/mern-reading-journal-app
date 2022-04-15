@@ -71,7 +71,7 @@ function Login() {
                         placeholder='Enter your username' 
                         onChange={onChange} 
                     />
-                    <label className='text-center text-slate-400 border-t-2 border-dashed border-sky-200 font-mono' for='username'>Username</label>
+                    <label className='text-center text-slate-400 border-t-2 border-dashed border-sky-200 font-mono' htmlFor='username'>Username</label>
                     <input 
                         type="password" 
                         className="px-3 pt-5 font-mono" 
@@ -81,7 +81,7 @@ function Login() {
                         placeholder='Enter your password' 
                         onChange={onChange} 
                     />
-                    <label className='text-center text-slate-400 border-t-2 border-dashed border-sky-200 font-mono' for='password'>Password</label>               
+                    <label className='text-center text-slate-400 border-t-2 border-dashed border-sky-200 font-mono' htmlFor='password'>Password</label>               
                     <button className='font-mono w-1/2 mx-auto py-2 border-solid border-slate-300 border-2 rounded mt-12 text-teal-700 font-bold bg-slate-50 hover:w-2/3 hover:py-3 hover:bg-slate-100' type='submit'>
                         Login
                     </button>   
