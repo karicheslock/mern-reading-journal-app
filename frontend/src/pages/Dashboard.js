@@ -54,7 +54,7 @@ function Dashboard() {
             
             <div className='font-mono text-2xl mt-4 bg-amber-50 px-24 py-8 text-rose-500 font-bold border rounded border-solid border-rose-300 border-4 flex flex-col items-center'>
             <p className='font-mono text-2xl mb-4 bg-amber-50 px-6 py-8 text-rose-500 font-bold'>Time to start reading!</p>
-              <p className='border rounded border-teal-500 border-4 px-4 py-2 mb-4 bg-teal-50 hover:px-6 hover:py-4 hover:text-3xl'><Link to='/add-entry'>Add a book</Link></p> <p className='mt-6'>and begin your journey.</p>
+              <p className='border rounded border-teal-500 border-4 px-4 py-2 mb-4 bg-teal-50 hover:px-6 hover:py-4 hover:text-3xl'><Link to='/create-book'>Add a book</Link></p> <p className='mt-6'>and begin your journey.</p>
             </div>
           </div>
         )}

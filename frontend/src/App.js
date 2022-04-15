@@ -1,11 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import EditBookForm from './components/EditBookForm';
+import BookForm from './components/BookForm';
 import Dashboard from './pages/Dashboard';
 import Login from './pages/Login';
 import Register from './pages/Register';
-import BookForm from './components/EditBookForm';
+import EditBookFrom from './components/EditBookForm';
 
 
 function App() {
@@ -17,8 +17,8 @@ function App() {
             <Route path='/' element={<Dashboard />} />
             <Route path='/login' element={<Login />} />
             <Route path='/register' element={<Register />} />
-            <Route path='/edit-entry' element={<EditBookForm />} />
-            <Route path='/add-entry' element={<BookForm />} />
+            <Route path='/create-book' element={<BookForm />} />
+            <Route path='/edit-book' element={<EditBookFrom />} />
           </Routes>
         </div>
       </Router>

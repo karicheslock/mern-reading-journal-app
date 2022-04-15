@@ -6,9 +6,9 @@ const { protect } = require('../middleware/authMiddleware');
 
 router.get('/', protect, getBooks);
 
-router.post('/', protect, createBook);
+router.post('/create-book', protect, createBook);
 
-router.put('/:id', protect, updateBook);
+router.put('/edit-book/:id', protect, updateBook);
 
 router.delete('/:id', protect, deleteBook);
 
