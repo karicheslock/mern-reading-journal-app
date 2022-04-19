@@ -34,10 +34,10 @@ function Dashboard() {
   }
 
   return (
-    <div className='container flex flex-col items-center mx-auto h-screen justify-center max-w-screen bg-teal-500'>
+    <div className='container flex flex-col items-center mx-auto justify-center max-w-screen bg-teal-500'>
       <Header />
-      <div className='container flex flex-col items-center mx-auto h-screen max-w-screen'>
-        <div className='mt-8 mb-10 text-3xl bg-amber-50 text-rose-500 px-24 border rounded border-solid border-rose-300 border-4 font-mono py-3 font-bold'>
+      <div className='container flex flex-col items-center mx-auto min-h-screen max-w-screen'>
+        <div className='mt-8 mb-8 text-3xl bg-amber-50 text-rose-500 px-24 border rounded border-solid border-rose-300 border-4 font-mono py-3 font-bold'>
           <p className='mb-4'>Welcome to your Personal Library, {user && user.firstName}!</p>
           <img src='../../images/bookshelf-clipart-md.png' alt='Bookshelf clipart' className='w-1/2 h-1/2 mx-auto' />
         </div>
@@ -48,6 +48,7 @@ function Dashboard() {
             {books.map((book) => (
               <BookItem key={book._id} book={book} />
             ))}
+            <p className='border rounded border-solid border-rose-400 border-4 px-4 py-2 mb-4 bg-amber-50 hover:px-6 hover:py-4 hover:text-xl font-mono text-teal-600 font-bold text-lg text-center'><Link to='/create-book'>Add another book</Link></p>
           </div>
         ) : (
           <div className='container flex flex-col items-center justify-center'>

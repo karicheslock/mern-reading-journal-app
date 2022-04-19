@@ -12,6 +12,15 @@ const getBooks = asyncHandler(async (req, res) => {
     res.status(200).json(books);
 });
 
+// @desc    Get single book
+// @route   GET /api/books/:id
+// @access  Private
+const getSingleBook = asyncHandler(async (req, res) => {
+    const book = await Book.findById(req.params.id);
+
+    res.status(200).json(book);
+})
+
 // @desc    Create book
 // @route   POST /api/books
 // @access  Private
@@ -94,6 +103,7 @@ const deleteBook = asyncHandler(async (req, res) => {
 
 module.exports = {
     getBooks,
+    getSingleBook,
     createBook,
     updateBook,
     deleteBook,

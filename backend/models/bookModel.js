@@ -19,14 +19,13 @@ const bookSchema = mongoose.Schema(
             type: String,
         },
         date: {
-            type: Date,
-            default: Date.now
+            type: String,
         },
         notes: {
             type: String
         },
         rating: {
-            type: String,
+            type: Number,
         }
     },
     {

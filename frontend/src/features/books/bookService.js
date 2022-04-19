@@ -10,7 +10,7 @@ const createBook = async (bookData, token) => {
         }
     }
 
-    const response = await axios.post(API_URL, bookData, config);
+    const response = await axios.post(`${API_URL}create-book`, bookData, config);
 
     return response.data;
 }
@@ -28,6 +28,19 @@ const getBooks = async (token) => {
     return response.data;
 }
 
+// Get single book
+const getSingleBook = async(bookId, token) => {
+    const config = {
+        headers: {
+            Authorization: `Bearer ${token}`
+        }
+    }
+
+    const response = await axios.get(`${API_URL}edit-book/${bookId}`, config);
+
+    return response.data;
+}
+
 // Update book
 const updateBook = async (bookId, bookData, token) => {
     const config = {
@@ -36,7 +49,7 @@ const updateBook = async (bookId, bookData, token) => {
         }
     }
 
-    const response = await axios.put(API_URL + bookId, bookData, config);
+    const response = await axios.put(`${API_URL}edit-book/${bookId}`, bookData, config);
 
     return response.data;
 }
@@ -57,6 +70,7 @@ const deleteBook = async (bookId, token) => {
 const bookService = {
     createBook,
     getBooks,
+    getSingleBook,
     updateBook,
     deleteBook,
 }
