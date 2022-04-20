@@ -45,18 +45,6 @@ export const getSingleBook = createAsyncThunk('books/getSingleBook', async(id, t
     }
 })
 
-// Update book
-export const updateBook = createAsyncThunk('books/update', async(id, bookData, thunkAPI) => {
-    try {
-        const token = thunkAPI.getState().auth.user.token;
-        return await bookService.updateBook(id, bookData, token);
-    }
-    catch (error) {
-        const message = (error.response && error.response.data && error.response.data.message) || error.message || error.toString();
-        return thunkAPI.rejectWithValue(message);
-    }
-})
-
 // Delete book
 export const deleteBook = createAsyncThunk('books/delete', async (id, thunkAPI) => {
     try {
@@ -112,23 +100,6 @@ export const bookSlice = createSlice({
                 state.books = action.payload
             })
             .addCase(getSingleBook.rejected, (state, action) => {
-                state.isLoading = false
-                state.isError = true
-                state.message = action.payload
-            })
-            .addCase(updateBook.pending, (state) => {
-                state.isLoading = true
-            })
-            .addCase(updateBook.fulfilled, (state, action) => {
-                state.isLoading = false
-                state.isSuccess = true
-                state.books = state.books.map((book) => {
-                    if(book._id === action.payload.id) { 
-                        return {...book, book: action.payload};
-                    }
-                })
-            })
-            .addCase(updateBook.rejected, (state, action) => {
                 state.isLoading = false
                 state.isError = true
                 state.message = action.payload

@@ -13,9 +13,9 @@ function BookItem({book}) {
         <p className='border-b-2 border-solid border-black px-1.5 pt-1.5'>Date: {book.date}</p>
         <p className='border-b-2 border-solid border-black px-1.5 pt-1.5'>Synopsis: {book.synopsis}</p>
         <p className='border-b-2 border-solid border-black px-1.5 pt-1.5'>My Notes: {book.notes}</p>
-        <div className='container flex'>
-            <p className='border-b-2 border-solid border-black px-1.5 pt-1.5'>My rating: <ReactStars count={5} value={book.rating} />
-            </p>
+        <div className='container flex border-b-2 border-solid border-black px-1.5 pt-1.5'>
+            <p className='pr-2'>My rating: </p>
+            <ReactStars edit={false} value={book.rating} />
         </div>
         <button className='flex mx-auto border border-solid border-black px-1 hover:text-lg mt-1' onClick={() => dispatch(deleteBook(book._id))}>
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-500 mr-1" viewBox="0 0 20 20" fill="currentColor">

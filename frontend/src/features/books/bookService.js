@@ -41,19 +41,6 @@ const getSingleBook = async(bookId, token) => {
     return response.data;
 }
 
-// Update book
-const updateBook = async (bookId, bookData, token) => {
-    const config = {
-        headers: {
-            Authorization: `Bearer ${token}`
-        }
-    }
-
-    const response = await axios.put(`${API_URL}edit-book/${bookId}`, bookData, config);
-
-    return response.data;
-}
-
 // Delete book
 const deleteBook = async (bookId, token) => {
     const config = {
@@ -71,7 +58,6 @@ const bookService = {
     createBook,
     getBooks,
     getSingleBook,
-    updateBook,
     deleteBook,
 }
 
