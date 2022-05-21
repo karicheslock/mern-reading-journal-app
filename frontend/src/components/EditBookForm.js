@@ -6,7 +6,7 @@ import Header from './Header';
 import ReactStars from 'react-rating-stars-component';
 import axios from 'axios';
 
-function BookForm() {
+function EditBookForm() {
     
     const [newBookData, setNewBookData] = useState({
         title: '',
@@ -148,4 +148,4 @@ function BookForm() {
     )
 }
 
-export default BookForm;
+export default EditBookForm;

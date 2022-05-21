@@ -19,7 +19,8 @@
     "express-async-handler": "^1.2.0",
     "http-proxy-middleware": "^2.0.4",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^6.2.11"
+    "mongoose": "^6.2.11",
+    "react-share": "^4.4.0"
   },
   "devDependencies": {
     "concurrently": "^7.1.0",
